@@ -24,8 +24,7 @@ Tested by [Zalexanninev15](https://github.com/Zalexanninev15) on Ubuntu 20.04/20
 ## Step 1
 
 ```bash
-sudo apt update
-sudo apt upgrade -y
+sudo apt update && apt upgrade -y
 sudo apt -y install dkms git bc
 git clone https://github.com/Zalexanninev15/RTL8812BU.git
 cd RTL8812BU
@@ -41,7 +40,6 @@ sudo reboot
 ## Step 2
 
 ```bash
-# configure for monitor mode
 sed -i 's/CONFIG_80211W = n/CONFIG_80211W = y/' Makefile
 sed -i 's/CONFIG_WIFI_MONITOR = n/CONFIG_WIFI_MONITOR = y/' Makefile
 make
