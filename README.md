@@ -13,14 +13,15 @@ A few known wireless cards that use this driver include:
 * Linksys WUSB6400M
 * Dlink DWA-181
 * Dlink DWA-182
+* [DEXP WFA-1301](https://www.dns-shop.ru/product/cd99c844d5383332/wi-fi-adapter-dexp-wfa-1301/)
 
-Currently tested with Linux kernel 4.12.14/4.15.0/5.3.0 on X86_64 platform **only**.
+Currently tested with Linux Kernel 4.12.14/4.15/5.3/5.4/5.8 on X86_64 (amd64) platform **only**
 
-### For Raspberry Pi
-* https://github.com/fastoe/RTL8812BU_for_Raspbian
+Tested by [Zalexanninev15](https://github.com/Zalexanninev15) on Ubuntu 20.04/20.10
 
+# Installation
 
-### DKMS installation
+## Step 1
 
 ```bash
 sudo apt update
@@ -36,20 +37,22 @@ sudo modprobe 88x2bu
 sudo reboot
 ```
 
-For setting monitor mode:
+## Step 2
 
 ```bash
 # configure for monitor mode
 sed -i 's/CONFIG_80211W = n/CONFIG_80211W = y/' Makefile
 sed -i 's/CONFIG_WIFI_MONITOR = n/CONFIG_WIFI_MONITOR = y/' Makefile
-
 make
 sudo make install
 sudo ifconfig wlx1cbfcea97791 down
 sudo iwconfig wlx1cbfcea97791 mode monitor
 sudo ifconfig wlx1cbfcea97791 up
 ```
+*P.S. For setting monitor mode*
 
-![image](https://www.fastoe.com/images/2020/05/8812bu-monitor-mode.png)
+## Step 3
 
-Enjoy!
+Use **iwconfig** to check the status of the Wi-fi adapter. The adapter must be displayed correctly, and the **Mode** is set to **Monitor**
+
+Completed! You can use the adapter 👍
