@@ -25,6 +25,7 @@ Tested by [Zalexanninev15](https://github.com/Zalexanninev15) on Ubuntu 20.04/20
 
 ```bash
 sudo apt update
+sudo apt upgrade -y
 sudo apt -y install dkms git bc
 git clone https://github.com/Zalexanninev15/RTL8812BU.git
 cd RTL8812BU
