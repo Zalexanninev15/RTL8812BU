@@ -1,6 +1,9 @@
 # Realtek RTL8812BU Driver for Linux
 
-
+[![](https://img.shields.io/badge/platform-Linux-orange.svg)](https://github.com/Zalexanninev15/RTL8812BU)
+[![](https://img.shields.io/github/v/release/Zalexanninev15/RTL8812BU)](https://github.com/Zalexanninev15/RTL8812BU/releases/latest)
+[![](https://img.shields.io/github/downloads/Zalexanninev15/RTL8812BU/total.svg)](https://github.com/Zalexanninev15/RTL8812BU/releases)
+[![](https://img.shields.io/badge/license-GPLv3-green.svg)](LICENSE)
 
 Driver for 802.11ac USB adapter with RTL8812BU chipset, only STA/Monitor mode is supported, no AP mode.
 
